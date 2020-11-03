@@ -37,15 +37,8 @@ public class StringsCalculator {
 
 	public int calculateValue(String numbers, String delimiter) //utility method for various purposes
 	{
-		int curr = 0;
-
 		String[] strs = numbers.split(delimiter);
-		for(String s:strs) 
-		{
-			curr += returnValue(s);
-		}
-
-		return curr;
+		return calculateValue(strs);
 	}
 
 	public int calculateValue(String[] numbers) //utility method for various purposes
@@ -55,20 +48,13 @@ public class StringsCalculator {
 		{
 			curr += returnValue(s);
 		}
-
 		return curr;
 	}
 
 	private int variableDelimiter(String numbers)// this figures out the delimiter and then process the numbers string accordingly
 	{
-		int curr = 0;
-
-		if(numbers.length() > 3)
-		{
-			String currDelimiter = numbers.substring(2,3);
-			String[] splitLines = numbers.split("\n");
-			curr = calculateValue(splitLines[1], currDelimiter);
-		}
-		return curr;
+		String currDelimiter = numbers.substring(2,3);
+		String[] splitLines = numbers.split("\n");
+		return calculateValue(splitLines[1], currDelimiter);
 	}
 }
