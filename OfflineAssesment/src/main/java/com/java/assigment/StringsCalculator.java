@@ -55,6 +55,25 @@ public class StringsCalculator {
 	{
 		String currDelimiter = numbers.substring(2,3);
 		String[] splitLines = numbers.split("\n");
-		return calculateValue(splitLines[1], currDelimiter);
+		int total = 0;
+
+		for(int i=1;i<splitLines.length;i++)
+		{
+			String currLine = splitLines[i];
+			if(!currLine.isEmpty())
+			{
+				if(currLine.contains(currDelimiter))
+				{
+					total = total + calculateValue(currLine,currDelimiter);
+				}
+				else//this means there's only one number in the current line of the string
+				{
+					total = total + Integer.parseInt(currLine);
+				}
+			}
+		}
+		//return calculateValue(splitLines[1], currDelimiter);
+
+		return total;
 	}
 }
