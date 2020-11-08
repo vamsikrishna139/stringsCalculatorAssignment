@@ -29,6 +29,7 @@ public class TestStringNumbers {
 		System.out.println(" Test 21, String is: -1\\n2,-3\\4 the result is:" + obj.add("-1\n2,-3\n4"));
 		System.out.println(" Test 22, String is: -1\\n2,-3\\n4,-5,6\\n7,9 the result is:" + obj.add("-1\n2,-3\n4,-5,6\n7,9"));
 		System.out.println(" Test 23,String is: //;\\n1;2;-4;5\\n6;-7;8;0\\n-9 the result is:" + obj.add("//;\n1;2;-4;5\n6;-7;8;0\n-9"));
+		System.out.println(" Test 24, String is: 1,1000,3 the result is:" + obj.add("1,1000,3"));
 		System.out.println(" total number of times add called is : " + obj.getCalledCount());
 	}
 }
