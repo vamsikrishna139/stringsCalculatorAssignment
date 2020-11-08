@@ -1,6 +1,6 @@
 package com.java.assignment.tests;
 
-import com.java.assigment.StringsCalculator;
+import com.java.string.calculator.StringsCalculator;
 
 public class TestStringNumbers {
 
@@ -20,6 +20,7 @@ public class TestStringNumbers {
 		System.out.println(" Test 11,String is: 10\\n,3\\n5,\\n the result is:" + obj.add("10\n,3\n5,\n"));
 		System.out.println(" Test 12,String is: //;\\n1;2 the result is:" + obj.add("//;\n1;2"));
 		System.out.println(" Test 13,String is: //:\\n1:2:4:5\\n6 the result is:" + obj.add("//:\n1:2:4:5\n6"));
-		System.out.println(" Test 14,String is: //-\\n1-2-4-5\\n6-7-8-0\\n9 the result is:" + obj.add("//-\n1-2-4-5\n6-7-8-0\n9"));
+		System.out.println(" Test 14,String is: //;\\n1;2;4;5\\n6;7;8;0\\n9 the result is:" + obj.add("//;\n1;2;4;5\n6;7;8;0\n9"));
+		System.out.println(" Test 15,String is: //;\\n1;2;4;-5\\n6;7;8;0\\n9 the result is:" + obj.add("//;\n1;2;4;-5\n6;7;8;0\n9"));
 	}
 }
