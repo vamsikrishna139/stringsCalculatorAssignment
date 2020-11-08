@@ -11,6 +11,13 @@ public class StringsCalculator {
 
 	public boolean isNegatives = false;
 
+	public int count = 0;
+
+	public int getCalledCount()
+	{
+		return count;
+	}
+
 	public int convertStringToInteger(String str)//method parses and returns the value of the current string
 	{
 		int currValue = 0;
@@ -56,6 +63,7 @@ public class StringsCalculator {
 	}
 	public int add(String numbers)
 	{
+		count++;
 		int sum = 0;
 		sum = processString(numbers);
 
